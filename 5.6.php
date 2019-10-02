@@ -1,33 +1,28 @@
 <html>
+
 <head>
-
     <style>
-
         td{
-
             border: 1px solid black;
         }
-
     </style>
-
 </head>
-
     <?php
 
-$num1 = 0;
+
 $num2 = 0;
 $num3 = 0;
 $color = "";
 
 echo "<table>";
 
-while ($num1 < 10) {
+for($i = 0; $i < 10; $i++){
 
     echo "<tr>";
 
-    while ($num2 < 11) {
+    for($y = 1; $y < 10; $y++){
 
-        switch($num2){
+        switch($y){
 
             case 0:  $color = "gray"; break;
             case 1:  $color = "blue"; break;
@@ -44,34 +39,34 @@ while ($num1 < 10) {
         }
     
 
-        if ($num1 == 0 && $num2 < 10) {
+        if ($i == 0 && $y < 10) {
 
             echo "<th>";
-            echo "Tabla del " . ($num2 + 1);
+            echo "Tabla del " . ($y + 1);
             echo "</th>";
 
         }
 
-        if ($num1 > 0) {
+        if ($i > 0) {
 
             echo "<td style='background: $color'>";
-            echo $num2 * $num3;
+            echo $y * $num3;
             echo "</td>";
         }
 
-        $num2++;
-
     }
-    $num1++;
-    $num2 =1;
+
     $num3++;
 
     echo "</tr>";
+
 }
 
 echo "</table";
 
 ?>
+
+
 
 
 </html>

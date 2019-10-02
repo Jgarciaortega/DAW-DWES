@@ -1,17 +1,11 @@
 <html>
 <head>
-
     <style>
-
         td{
-
             border: 1px solid black;
         }
-
     </style>
-
 </head>
-
     <?php
 
 $num1 = 0;
@@ -21,11 +15,11 @@ $color = "";
 
 echo "<table>";
 
-while ($num1 < 10) {
+do {
 
     echo "<tr>";
 
-    while ($num2 < 11) {
+    do {
 
         switch($num2){
 
@@ -61,13 +55,16 @@ while ($num1 < 10) {
 
         $num2++;
 
-    }
+    }while ($num2 < 11);
+
+
     $num1++;
     $num2 =1;
     $num3++;
 
     echo "</tr>";
-}
+
+}while ($num1 < 10);
 
 echo "</table";
 
