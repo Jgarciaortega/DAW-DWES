@@ -16,7 +16,7 @@
       
         echo 'Comparacion antes de incremento '. ($num1 == $num2). '<br>';
         echo 'Incremento con $num1++ y da igual ' .($num1++ == $num2). '<br>';
-        $num2 = 6;
+        
         echo 'Incremento con ++$num1 y no da igual ' .(++$num1 == $num2). '<br>';
        
     

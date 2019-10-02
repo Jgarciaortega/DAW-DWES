@@ -20,7 +20,7 @@
             $horaActual = date ("d: m: o");
            
            
-            echo "La hora actual es $horaActual";
+            echo 'La hora actual es $horaActual';
 
            
             ?>   
