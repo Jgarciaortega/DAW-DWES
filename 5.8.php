@@ -59,7 +59,7 @@ do {
     }
 
     if ($paloma2X < $casaX) {
-        $palomaX2++;
+        $paloma2X++;
     } elseif ($paloma2X > $casaX) {
         $paloma2X--;
     }
@@ -79,30 +79,32 @@ do {
         for ($x = 0; $x < $tamañoMapa; $x++) {
 
             if ($x == $casaX && $y == $casaY) {
+
                 echo '<span class="casa">+</span>'; //Casa
                 
             } elseif ($x == $palomaX && $y == $palomaY) {
+
                 echo '<span class="paloma">%</span>'; #Paloma
+
             }elseif($x == $paloma2X && $y == $paloma2Y){
 
                 echo '<span class="paloma">*</span>'; #Paloma
+                
             } else {
                 
                 echo '<span class="aire">.</span>'; #Aire
             }
 
-
             echo ($x != $tamañoMapa - 1) ? " " : ""; #siempre se añade un carácter de espacio en cada celda, salvo al final.
-
 
         }
 
         echo "\n"; #Salto de línea. como se está dentro de un <pre>, se reflejará en la pantalla.
     }
 
-    echo "</pre>palomax=$palomaX palomaY=$palomaY paloma2x =$paloma2X paloma2y = $paloma2Y</div>\n";
+    echo "</pre>palomax=$palomaX palomaY=$palomaY \n palom2x=$paloma2X palom2y= $paloma2Y</div>\n";
    
-} while ($palomaX != $casaX || $palomaY != $casaY || $paloma2X != $casaX || $paloma2Y != $casaY);
+} while (($palomaX != $casaX || $palomaY != $casaY) || ($paloma2X != $casaX || $paloma2Y != $casaY));
 
 ?>
 
