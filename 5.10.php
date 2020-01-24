@@ -35,7 +35,7 @@ $izquierda = false;
 $arriba = true;
 $abajo = true;
 
-# Posicionar la paloma
+# Posicionar pelota
 
 $pelotaX = rand(0, $tamañoMapa - 1);
 $pelotaY = rand(0, $tamañoMapa - 1);

@@ -1,0 +1,22 @@
+<html>
+    <body>
+       
+        <!-- La condificación multipart/form-data es para enviar archivos
+             de la misma manera que en los adjuntos de correo electrónico
+             (MIME)
+        -->
+       
+        <form action="7.6.php" method = "post" enctype="multipart/form-data">
+           
+            Elija un nombre para su album:<br>     
+            <input type="text" name="nombre">
+            <br>
+            Elija un archivo para subirlo: <br>
+            <input type="file" name="archivo1"> 
+            <br> 
+            <input type="submit" value="enviar">
+           
+        </form>
+    </body>
+   
+</html>

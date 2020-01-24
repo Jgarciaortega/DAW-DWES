@@ -30,86 +30,264 @@
 
 $tamañoMapa = 10;
 $contRebotes = 0;
-$derecha = true;
-$izquierda = false;
-$arriba = true;
-$abajo = true;
 
-# Posicionar la paloma
+$derecha1 = true;
+$izquierda1 = false;
+$arriba1 = true;
+$abajo1 = true;
 
-$pelotaX = rand(0, $tamañoMapa - 1);
-$pelotaY = rand(0, $tamañoMapa - 1);
-   
-if ($pelotaX < 9){
+$derecha2 = true;
+$izquierda2 = false;
+$arriba2 = true;
+$abajo2 = true;
 
-    $derecha = true;
-    $izquierda = false;
+$derecha3 = true;
+$izquierda3 = false;
+$arriba3 = true;
+$abajo3 = true;
+
+
+# Pelota 1
+
+$pelota1X = rand(0, $tamañoMapa - 1);
+$pelota1Y = rand(0, $tamañoMapa - 1);
+
+# Pelota 2
+
+$pelota2X = rand(0, $tamañoMapa - 1);
+$pelota2Y = rand(0, $tamañoMapa - 1);
+
+# Pelota 3
+
+$pelota3X = rand(0, $tamañoMapa - 1);
+$pelota3Y = rand(0, $tamañoMapa - 1);
+
+# Movimiento pelota 1
+
+if ($pelota1X < 9){
+
+    $derecha1 = true;
+    $izquierda1 = false;
 
 }else{
 
-    $derecha = false;
-    $izquierda = true;
+    $derecha1 = false;
+    $izquierda1 = true;
 }
 
-if ($pelotaY < 9){
+if ($pelota1Y < 9){
 
-    $abajo = true;
-    $arriba = false;
+    $abajo1 = true;
+    $arriba1 = false;
 
 }else{
 
-    $abajo = false;
-    $arriba = true;
+    $abajo1 = false;
+    $arriba1 = true;
 }
+
+# Movimiento pelota 2
+
+if ($pelota2X < 9){
+
+    $derecha2 = true;
+    $izquierda2 = false;
+
+}else{
+
+    $derecha2 = false;
+    $izquierda2 = true;
+}
+
+if ($pelota2Y < 9){
+
+    $abajo2 = true;
+    $arriba2 = false;
+
+}else{
+
+    $abajo2 = false;
+    $arriba2 = true;
+}
+
+# Movimiento pelota 3
+
+if ($pelota3X < 9){
+
+    $derecha3 = true;
+    $izquierda3 = false;
+
+}else{
+
+    $derecha3 = false;
+    $izquierda3 = true;
+}
+
+if ($pelota3Y < 9){
+
+    $abajo3 = true;
+    $arriba3 = false;
+
+}else{
+
+    $abajo3 = false;
+    $arriba3 = true;
+}
+
+
+
 
 do {
 
-if (($derecha) && ($pelotaX < 9)){
+//PELOTA 1
+if (($derecha1) && ($pelota1X < 9)){
 
-    $pelotaX++;
+    $pelota1X++;
 
 }
 
-if (($izquierda) && ($pelotaX > 0)){
+if (($izquierda1) && ($pelota1X > 0)){
 
-    $pelotaX--;
+    $pelota1X--;
 } 
 
-if (($abajo) && ($pelotaY < 9)){
+if (($abajo1) && ($pelota1Y < 9)){
 
-    $pelotaY++;
+    $pelota1Y++;
 }
 
-if (($arriba) && ($pelotaY > 0)){
+if (($arriba1) && ($pelota1Y > 0)){
 
-    $pelotaY--;
+    $pelota1Y--;
 }
 
-if($pelotaX == 9){
+if($pelota1X == 9){
 
-    $derecha = false;
-    $izquierda = true;
+    $derecha1 = false;
+    $izquierda1 = true;
     $contRebotes++;
 }
 
-if($pelotaX == 0){
+if($pelota1X == 0){
 
-    $derecha = true;
-    $izquierda = false;
+    $derecha1 = true;
+    $izquierda1 = false;
     $contRebotes++;
 }
 
-if($pelotaY == 9){
+if($pelota1Y == 9){
 
-    $abajo = false;
-    $arriba = true;
+    $abajo1 = false;
+    $arriba1 = true;
     $contRebotes++;
 }
 
-if($pelotaY == 0){
+if($pelota1Y == 0){
 
-    $abajo = true;
-    $arriba = false;
+    $abajo1 = true;
+    $arriba1 = false;
+    $contRebotes++;
+
+}
+
+# PELOTA 2
+if (($derecha2) && ($pelota2X < 9)){
+
+    $pelota2X++;
+
+}
+
+if (($izquierda2) && ($pelota2X > 0)){
+
+    $pelota2X--;
+} 
+
+if (($abajo2) && ($pelota2Y < 9)){
+
+    $pelota2Y++;
+}
+
+if (($arriba2) && ($pelota2Y > 0)){
+
+    $pelota2Y--;
+}
+
+if($pelota2X == 9){
+
+    $derecha2 = false;
+    $izquierda2 = true;
+    $contRebotes++;
+}
+
+if($pelota2X == 0){
+
+    $derecha2 = true;
+    $izquierda2 = false;
+    $contRebotes++;
+}
+
+if($pelota2Y == 9){
+
+    $abajo2 = false;
+    $arriba2 = true;
+    $contRebotes++;
+}
+
+if($pelota2Y == 0){
+
+    $abajo2 = true;
+    $arriba2 = false;
+    $contRebotes++;
+
+}
+
+# PELOTA 3
+if (($derecha3) && ($pelota3X < 9)){
+
+    $pelota3X++;
+
+}
+
+if (($izquierda3) && ($pelota3X > 0)){
+
+    $pelota3X--;
+} 
+
+if (($abajo3) && ($pelota3Y < 9)){
+
+    $pelota3Y++;
+}
+
+if (($arriba3) && ($pelota3Y > 0)){
+
+    $pelota3Y--;
+}
+
+if($pelota3X == 9){
+
+    $derecha3 = false;
+    $izquierda3 = true;
+    $contRebotes++;
+}
+
+if($pelota3X == 0){
+
+    $derecha3 = true;
+    $izquierda3 = false;
+    $contRebotes++;
+}
+
+if($pelota3Y == 9){
+
+    $abajo3 = false;
+    $arriba3 = true;
+    $contRebotes++;
+}
+
+if($pelota3Y == 0){
+
+    $abajo3 = true;
+    $arriba3 = false;
     $contRebotes++;
 
 }
@@ -122,13 +300,22 @@ if($pelotaY == 0){
 
         for ($x = 0; $x < $tamañoMapa; $x++) {
              
-            if ($x == $pelotaX && $y == $pelotaY) {
+            if ($x == $pelota1X && $y == $pelota1Y) {
 
-                echo '<span class="paloma">O</span>'; #Paloma
+                echo '<span class="paloma">O</span>'; 
+
+            }elseif ($x == $pelota2X && $y == $pelota2Y) {
+
+                echo '<span class="paloma">*</span>'; 
+            
+
+            }elseif ($x == $pelota3X && $y == $pelota3Y) {
+
+                echo '<span class="paloma">$</span>'; 
 
             }else {
                 
-                echo '<span class="aire">.</span>'; #Aire
+                echo '<span class="aire">.</span>'; 
             }
 
             echo ($x != $tamañoMapa - 1) ? " " : ""; #siempre se añade un carácter de espacio en cada celda, salvo al final.
@@ -138,9 +325,9 @@ if($pelotaY == 0){
         echo "\n"; #Salto de línea. como se está dentro de un <pre>, se reflejará en la pantalla.
     }
 
-    echo "</pre>palomax=$pelotaX palomaY=$pelotaY </div>\n";
+    echo "</pre>pelotaO X=$pelota1X pelotaO Y=$pelota1Y pelota* X=$pelota2X pelota* Y=$pelota2Y pelota$ X=$pelota3X pelota$ Y=$pelota3Y rebote=$contRebotes</div>\n";
     
-} while ($contRebotes < 6);
+} while ($contRebotes < 18);
 
 
 ?>
